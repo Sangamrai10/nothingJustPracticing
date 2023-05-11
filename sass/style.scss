@@ -1,0 +1,127 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    background: #102413;
+    font-family: sans-serif;
+}
+.con
+{
+    max-width: 1200px;
+    margin: auto;
+}
+.flex
+{
+    display: flex;
+    justify-content: space-between;
+}
+.navigation
+{
+    margin: 15px 0 0 0;
+}
+nav
+{
+    text-align: center;
+    ul
+    {
+        list-style: none;
+        li
+        {
+            display: inline;
+            padding: 10px;
+            position: relative;
+            a 
+            { 
+                text-decoration: none;
+                color: #fff;
+            }
+            // dropdown 
+            .dropdown   
+            {
+                width: 130px;
+                position: absolute;
+                display: none;
+                top: 100%;
+                left: 10%;
+                background: linear-gradient(transparent, black, black);
+                border-bottom: 2px solid #fff;
+                border-radius: 3px;
+                animation: dd 1s  1 linear;
+                
+                li 
+                {
+                    display: block;
+                    padding: 0px;
+                    margin: 8px 0 ;
+                }
+            }
+            &:hover .dropdown
+            {
+                display: block;
+            }
+            // dropdown for contact me 
+            .dropdown1  
+            {
+                width: 100px;
+                position: absolute;
+                display: none;
+                top: 100%;
+                left: 10%;
+                background: linear-gradient(transparent, black, black);
+                border-bottom: 2px solid #fff;
+                border-radius: 3px;
+                animation: dd 1s  1 linear;
+                
+                li 
+                {
+                    display: block;
+                    padding: 0px;
+                    margin: 8px 0 ;
+                }
+            }
+            &:hover .dropdown1
+            {
+                display: block;
+            }
+        }
+    }
+}
+
+@keyframes dd 
+{
+    0%
+    {
+        transform: translate(-200);
+    }
+    100%
+    {
+        transform: translate(20);
+    }
+
+}
+img
+{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+// responsive
+@media (max-width: 768px)
+{
+    .contact1
+    {
+        display: none;
+    }
+}
+@media (min-width: 769px) and (max-width: 1420px)
+{
+    .menuIcon
+    {
+        display: none;
+    }
+}
